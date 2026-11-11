@@ -772,4 +772,4 @@ section.blk{padding:120px 0}
   [].forEach.call(document.querySelectorAll("[data-scr]"),function(a){var orig=a.textContent;a.setAttribute("aria-label",orig);
     a.addEventListener("pointerenter",function(){if(reduce)return;var f=0;var iv=setInterval(function(){a.textContent=orig.split("").map(function(c,i){return i<f?orig[i]:(c===" "?" ":chars[Math.floor(Math.random()*26)])}).join("");f+=.5;if(f>orig.length){clearInterval(iv);a.textContent=orig;}},28);});});
 })();
-</script></body></html>
+</script><script defer src="/_vercel/insights/script.js"></script></body></html>
