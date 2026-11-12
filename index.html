@@ -474,6 +474,52 @@ section.blk{padding:5.5rem 0}
 
 .cad .cgrid,.hsdash .cgrid{align-items:stretch}.cad .ph,.hsdash .ph{aspect-ratio:auto;overflow:visible;border-radius:0}
 
+.cad .seg{display:inline-flex;flex-wrap:wrap;gap:0.25rem;background:#fff;border:1px solid var(--c-line);border-radius:0.625rem;padding:3px;margin:0 0 0.75rem}
+.cad .seg button{border:0;background:none;border-radius:0.4375rem;padding:0.375rem 0.75rem;font:600 0.7812rem/1.2 "Plus Jakarta Sans",system-ui,sans-serif;color:var(--c-muted);cursor:pointer;transition:background .2s,color .2s}
+.cad .seg button:hover{color:var(--c-head)}
+.cad .seg button[aria-pressed="true"]{background:#101010;color:#fff}
+.cad .hint,.cad .cc-s{font-size:0.75rem;color:var(--c-muted);font-weight:500}
+.cad .hint{margin:-6px 0 0.625rem}
+.cad .trows li[role="checkbox"]{cursor:pointer;transition:background .2s}
+.cad .trows li[role="checkbox"]:hover{background:#fafafa}
+.cad .trows li[role="checkbox"]:focus-visible{outline:2px solid #005DE0;outline-offset:-2px}
+.cad .trows li[aria-checked="true"] .cb{background:#005DE0;border-color:#005DE0}
+.cad .trows li[aria-checked="true"] .cb::after{content:"✓";color:#fff;font-size:0.6875rem;line-height:1}
+.cad .trows li[aria-checked="true"] .tt{text-decoration:line-through;color:var(--c-muted)}
+.cad .hbar b::after{transition:width .6s cubic-bezier(.16,1,.3,1)}
+.cad .sbar i{transition:width .6s cubic-bezier(.16,1,.3,1)}
+.cad .vbars b{position:relative;transition:height .55s cubic-bezier(.16,1,.3,1),opacity .2s;cursor:pointer}
+.cad .vbars:hover b{opacity:.55}.cad .vbars b:hover,.cad .vbars b.sel{opacity:1}
+.cad .vbars b::after{content:attr(data-v);position:absolute;left:50%;bottom:calc(100% + 0.375rem);transform:translateX(-50%);background:#101010;color:#fff;font-size:0.6875rem;font-weight:700;padding:3px 0.4375rem;border-radius:0.375rem;white-space:nowrap;opacity:0;pointer-events:none;transition:opacity .2s}
+.cad .vbars b:hover::after,.cad .vbars b.sel::after{opacity:1}
+.cad .vbars{padding-top:1.625rem}
+.cad .vlab{display:flex;gap:0.5rem;margin-top:0.375rem}.cad .vlab span{flex:1;text-align:center;font-size:0.6875rem;color:var(--c-muted)}
+.cad #cpRows tr{transition:background .2s}.cad #cpRows tr.hl{background:color-mix(in oklab,#005DE0 9%,#fff)}
+.cad .stack i{transition:opacity .25s,width .5s}
+.cad .stack.focus i{opacity:.22}.cad .stack.focus i.on{opacity:1}
+.cad .lgd{display:flex;flex-wrap:wrap;gap:0.375rem;margin-top:0.375rem}
+.cad .lgb{display:inline-flex;align-items:center;gap:0.375rem;border:1px solid var(--c-line);background:#fff;border-radius:62.4375rem;padding:0.3125rem 0.625rem;font:600 0.75rem "Plus Jakarta Sans",system-ui,sans-serif;color:var(--c-head);cursor:pointer}
+.cad .lgb i{width:0.5625rem;height:0.5625rem;border-radius:2px;display:inline-block}
+.cad .lgb[aria-pressed="true"]{border-color:#101010;background:#101010;color:#fff}
+.cad .oc-read{margin-top:0.625rem;font-size:0.8125rem;font-weight:700;color:var(--c-head)}
+.cad .sw-row{display:flex;justify-content:space-between;align-items:center;gap:0.75rem;padding:0.625rem 0;border-top:1px solid #F1F1F1;font-size:0.875rem;color:var(--c-head)}
+.cad .sw-row:first-child{border-top:0;padding-top:2px}
+.cad .sw-row small{color:var(--c-muted);font-size:0.75rem;margin-left:0.375rem}
+.cad .switch{position:relative;width:2.625rem;height:1.5rem;flex:none;border-radius:62.4375rem;border:0;padding:0;background:#D7D7D7;cursor:pointer;transition:background .25s}
+.cad .switch::after{content:"";position:absolute;top:3px;left:3px;width:1.125rem;height:1.125rem;border-radius:50%;background:#fff;box-shadow:0 1px 3px rgba(0,0,0,.25);transition:transform .25s cubic-bezier(.16,1,.3,1)}
+.cad .switch[aria-checked="true"]{background:#005DE0}
+.cad .switch[aria-checked="true"]::after{transform:translateX(1.125rem)}
+.cad .switch:disabled{opacity:.55;cursor:not-allowed}
+.cad .switch:focus-visible{outline:2px solid #005DE0;outline-offset:2px}
+.cad .audit{list-style:none;margin:0.375rem 0 0;padding:0;font-size:0.7812rem;color:var(--c-muted)}
+.cad .audit li{padding:0.3125rem 0;border-top:1px solid #F1F1F1}.cad .audit li:first-child{border-top:0}
+.cad .audit li.new{animation:auIn .45s ease}
+@keyframes auIn{from{opacity:0;transform:translateY(-6px)}}
+.cad .ctbl.wrap th,.cad .ctbl.wrap td{white-space:normal}
+.cad .tiles strong{transition:opacity .2s}
+@media (max-width:760px){.cad .ctbl td,.cad .ctbl th{white-space:normal}.cad .vbars b::after{font-size:0.625rem}}
+.cad .pill{min-height:0;gap:0;line-height:1.5;text-decoration:none}
+
 </style>
 <script type="text/javascript">(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window, document, "clarity", "script", "zbrlhenvp3");</script>
 <link rel="canonical" href="https://meetmanav.com/"><meta property="og:type" content="website"><meta property="og:site_name" content="Manav Veetil"><meta property="og:title" content="Manav Veetil | B2B Marketing Operations"><meta property="og:description" content="Marketing Executive at Navsoft, Mumbai. Multi-channel B2B outreach, HubSpot and Salesforce, and Cadence, the work app I built for my team."><meta property="og:url" content="https://meetmanav.com/"><meta property="og:image" content="https://meetmanav.com/og-image.jpg"><meta property="og:image:secure_url" content="https://meetmanav.com/og-image.jpg"><meta property="og:image:type" content="image/jpeg"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="627"><meta property="og:image:alt" content="Manav Veetil, B2B Marketing Operations, meetmanav.com"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Manav Veetil | B2B Marketing Operations"><meta name="twitter:description" content="Marketing Executive at Navsoft, Mumbai. Multi-channel B2B outreach, HubSpot and Salesforce, and Cadence, the work app I built for my team."><meta name="twitter:image" content="https://meetmanav.com/og-image.jpg"><meta name="theme-color" content="#17201A">
@@ -529,30 +575,9 @@ section.blk{padding:5.5rem 0}
             </nav>
 
             <div class="cad-main">
-              <section class="cad-pane" role="tabpanel" id="q1" aria-labelledby="k1" tabindex="0">
-                <div class="ph"><h4>My Day</h4><p>Thursday · standup done</p></div>
-                <ul class="trows">
-                  <li><span class="cb" aria-hidden="true"></span><span class="tt">Draft follow-up sequence for expo leads</span><span class="tag-p">Email Marketing</span><span class="badge b-amber">Due today</span></li>
-                  <li class="late"><span class="cb" aria-hidden="true"></span><span class="tt">Schedule next week’s LinkedIn posts</span><span class="tag-p">Social Media</span><span class="badge b-red">Carried 2×</span></li>
-                  <li><span class="cb" aria-hidden="true"></span><span class="tt">Publish two blog posts</span><span class="tag-p">SEO</span><span class="badge b-blue">Submitted</span></li>
-                  <li class="done"><span class="cb on" aria-hidden="true">✓</span><span class="tt">Upload new ad creative variants</span><span class="tag-p">Performance Marketing</span><span class="badge b-green">Done</span></li>
-                </ul>
-                <div class="block-card"><p class="bc-t">Open blocker</p><p>Waiting on final product screenshots from design for the landing page.</p></div>
-              </section>
+              <section class="cad-pane" role="tabpanel" id="q1" aria-labelledby="k1" tabindex="0"><div class="ph"><h4>My Day</h4><p id="mdSub">Thursday · standup done · 1 of 4 done</p></div><p class="hint">Tap a task to tick it off.</p><ul class="trows" id="mdList"><li role="checkbox" tabindex="0" aria-checked="false" data-badge="b-amber" data-label="Due today"><span class="cb" aria-hidden="true"></span><span class="tt">Draft follow-up sequence for expo leads</span><span class="tag-p">Email Marketing</span><span class="badge b-amber">Due today</span></li><li role="checkbox" tabindex="0" aria-checked="false" data-badge="b-red" data-label="Carried 2×"><span class="cb" aria-hidden="true"></span><span class="tt">Schedule next week’s LinkedIn posts</span><span class="tag-p">Social Media</span><span class="badge b-red">Carried 2×</span></li><li role="checkbox" tabindex="0" aria-checked="false" data-badge="b-blue" data-label="Submitted"><span class="cb" aria-hidden="true"></span><span class="tt">Publish two blog posts</span><span class="tag-p">SEO</span><span class="badge b-blue">Submitted</span></li><li role="checkbox" tabindex="0" aria-checked="true" data-badge="b-green" data-label="Done"><span class="cb" aria-hidden="true"></span><span class="tt">Upload new ad creative variants</span><span class="tag-p">Performance Marketing</span><span class="badge b-green">Done</span></li></ul><div class="block-card"><p class="bc-t">Open blocker</p><p>Waiting on final product screenshots from design for the landing page.</p></div></section>
 
-              <section class="cad-pane" role="tabpanel" id="q2" aria-labelledby="k2" tabindex="0" hidden>
-                <div class="ph"><h4>Command Dashboard</h4><p>How the team is tracking this week</p></div>
-                <div class="tiles t4"><div><span>On-time %</span><strong>87%</strong></div><div><span>Overdue</span><strong class="red">4</strong></div><div><span>Open blockers</span><strong>2</strong></div><div><span>Carried 3×+</span><strong class="red">1</strong></div></div>
-                <div class="cgrid">
-                  <div class="ccard"><p class="cc-t">Project completion</p>
-                    <div class="hbar"><span>Email Marketing</span><b style="--w:72%"></b><em>72%</em></div>
-                    <div class="hbar"><span>SEO</span><b style="--w:58%"></b><em>58%</em></div>
-                    <div class="hbar"><span>Social Media</span><b style="--w:81%"></b><em>81%</em></div>
-                    <div class="hbar"><span>Performance</span><b style="--w:64%"></b><em>64%</em></div></div>
-                  <div class="ccard"><p class="cc-t">Who’s lagging behind</p>
-                    <ul class="mini"><li><span>Member C</span><span class="badge b-red">3 overdue</span></li><li><span>Member F</span><span class="badge b-amber">1 carried 3×</span></li></ul></div>
-                </div>
-              </section>
+              <section class="cad-pane" role="tabpanel" id="q2" aria-labelledby="k2" tabindex="0" hidden><div class="ph"><h4>Command Dashboard</h4><p>How the team is tracking</p></div><div class="seg" role="group" aria-label="Period"><button type="button" data-v="week" aria-pressed="true">This week</button><button type="button" data-v="month" aria-pressed="false">This month</button></div><div class="tiles t4" id="cdTiles"><div><span>On-time %</span><strong>87%</strong></div><div><span>Overdue</span><strong class="red">4</strong></div><div><span>Open blockers</span><strong>2</strong></div><div><span>Carried 3×+</span><strong class="red">1</strong></div></div><div class="cgrid"><div class="ccard"><p class="cc-t">Project completion</p><div id="cdBars"><div class="hbar"><span>Email Marketing</span><b style="--w:72%"></b><em>72%</em></div><div class="hbar"><span>SEO</span><b style="--w:58%"></b><em>58%</em></div><div class="hbar"><span>Social Media</span><b style="--w:81%"></b><em>81%</em></div><div class="hbar"><span>Performance</span><b style="--w:64%"></b><em>64%</em></div></div></div><div class="ccard"><p class="cc-t">Who’s lagging behind</p><ul class="mini" id="cdLag"><li><span>Member C</span><span class="badge b-red">3 overdue</span></li><li><span>Member F</span><span class="badge b-amber">1 carried 3×</span></li></ul></div></div></section>
 
               <section class="cad-pane" role="tabpanel" id="q3" aria-labelledby="k3" tabindex="0" hidden>
                 <div class="ph"><h4>Acceptance</h4><p>Submitted work waiting for your review</p></div>
@@ -562,67 +587,15 @@ section.blk{padding:5.5rem 0}
                 <p class="cnote">Members submit with proof, channel managers accept or send back with a comment and a resubmit-by date, and managers’ own work goes to the admin. Nobody can approve their own work.</p>
               </section>
 
-              <section class="cad-pane" role="tabpanel" id="q4" aria-labelledby="k4" tabindex="0" hidden>
-                <div class="ph"><h4>Efforts vs Outcome</h4><p>Email Marketing · monthly</p></div>
-                <div class="ctbl"><table>
-                  <thead><tr><th>Metric</th><th>Target</th><th>Carried</th><th>Achieved</th><th>Attain</th></tr></thead>
-                  <tbody>
-                    <tr><td>Emails sent<small>Effort</small></td><td>8,000</td><td>500</td><td>8,200</td><td><span class="badge b-amber">96%</span></td></tr>
-                    <tr><td>Meetings booked<small>Outcome</small></td><td>12</td><td>0</td><td>13</td><td><span class="badge b-green">108%</span></td></tr>
-                    <tr><td>Bounce rate<small>Outcome · lower is better</small></td><td>2.0%</td><td>–</td><td>2.6%</td><td><span class="badge b-red">77%</span></td></tr>
-                  </tbody></table></div>
-                <p class="cnote">Total target = base + carried-in shortfall. Green 100%+, amber 80–99%, red under 80%.</p>
-              </section>
+              <section class="cad-pane" role="tabpanel" id="q4" aria-labelledby="k4" tabindex="0" hidden><div class="ph"><h4>Efforts vs Outcome</h4><p id="eoSub">Email Marketing · monthly</p></div><div class="seg" role="group" aria-label="Channel"><button type="button" data-v="email" aria-pressed="true">Email</button><button type="button" data-v="seo" aria-pressed="false">SEO</button><button type="button" data-v="social" aria-pressed="false">Social</button></div><div class="ctbl"><table><thead><tr><th>Metric</th><th>Target</th><th>Carried</th><th>Achieved</th><th>Attain</th></tr></thead><tbody id="eoBody"></tbody></table></div><p class="cnote">Total target = base + carried-in shortfall. Green 100%+, amber 80–99%, red under 80%.</p></section>
 
-              <section class="cad-pane" role="tabpanel" id="q5" aria-labelledby="k5" tabindex="0" hidden>
-                <div class="ph"><h4>Instantly campaigns by region</h4><p>Last 7 days · all regions · synced daily</p></div>
-                <div class="tiles t4"><div><span>Emails sent</span><strong>12,480</strong></div><div><span>Open rate</span><strong>64.2%</strong></div><div><span>Click rate</span><strong>5.8%</strong></div><div><span>Replies</span><strong>142</strong></div></div>
-                <div class="cgrid">
-                  <div class="ccard"><p class="cc-t">Emails sent per day</p><div class="vbars" aria-hidden="true"><b style="--h:62%"></b><b style="--h:78%"></b><b style="--h:55%"></b><b style="--h:90%"></b><b style="--h:84%"></b><b style="--h:30%"></b><b style="--h:24%"></b></div></div>
-                  <div class="ccard"><p class="cc-t">Regions side by side</p>
-                    <div class="ctbl"><table><thead><tr><th>Region</th><th>Sent</th><th>Open</th><th>Click</th></tr></thead><tbody>
-                      <tr><td>AMER</td><td>4,380</td><td>65%</td><td>6.0%</td></tr><tr><td>APAC</td><td>4,960</td><td>63%</td><td>5.7%</td></tr><tr><td>EMEA</td><td>3,140</td><td>64%</td><td>5.6%</td></tr></tbody></table></div></div>
-                </div>
-              </section>
+              <section class="cad-pane" role="tabpanel" id="q5" aria-labelledby="k5" tabindex="0" hidden><div class="ph"><h4>Instantly campaigns by region</h4><p>Last 7 days · synced daily</p></div><div class="seg" role="group" aria-label="Region"><button type="button" data-v="all" aria-pressed="true">All</button><button type="button" data-v="amer" aria-pressed="false">AMER</button><button type="button" data-v="apac" aria-pressed="false">APAC</button><button type="button" data-v="emea" aria-pressed="false">EMEA</button></div><div class="tiles t4" id="cpTiles"></div><div class="cgrid"><div class="ccard"><p class="cc-t">Emails sent per day <small class="cc-s">hover or tap a bar</small></p><div class="vbars" id="cpBars"></div><div class="vlab"><span>M</span><span>T</span><span>W</span><span>T</span><span>F</span><span>S</span><span>S</span></div></div><div class="ccard"><p class="cc-t">Regions side by side</p><div class="ctbl"><table><thead><tr><th>Region</th><th>Sent</th><th>Open</th><th>Click</th></tr></thead><tbody id="cpRows"><tr data-r="amer"><td>AMER</td><td>4,380</td><td>65%</td><td>6.0%</td></tr><tr data-r="apac"><td>APAC</td><td>4,960</td><td>63%</td><td>5.7%</td></tr><tr data-r="emea"><td>EMEA</td><td>3,140</td><td>64%</td><td>5.6%</td></tr></tbody></table></div></div></div></section>
 
-              <section class="cad-pane" role="tabpanel" id="q6" aria-labelledby="k6" tabindex="0" hidden>
-                <div class="ph"><h4>HubSpot Team Activity</h4><p>Follow-ups, tasks and neglected deals across the sales team, from HubSpot</p></div>
-                <div class="tiles t4"><div><span>Calls</span><strong>186</strong></div><div><span>Emails</span><strong>342</strong></div><div><span>Meetings</span><strong>21</strong></div><div><span>Pending tasks</span><strong>38</strong><small class="red">6 overdue</small></div></div>
-                <div class="cgrid">
-                  <div class="ccard"><p class="cc-t">Follow-ups by person</p>
-                    <div class="sbar"><span>Rep A</span><b><i class="c1" style="--w:40%"></i><i class="c2" style="--w:35%"></i><i class="c3" style="--w:8%"></i></b></div>
-                    <div class="sbar"><span>Rep B</span><b><i class="c1" style="--w:28%"></i><i class="c2" style="--w:42%"></i><i class="c3" style="--w:5%"></i></b></div>
-                    <div class="sbar"><span>Rep C</span><b><i class="c1" style="--w:33%"></i><i class="c2" style="--w:22%"></i><i class="c3" style="--w:10%"></i></b></div>
-                    <p class="legend"><i class="c1"></i>Calls <i class="c2"></i>Emails <i class="c3"></i>Meetings</p></div>
-                  <div class="ccard"><p class="cc-t">Neglected deals</p>
-                    <ul class="mini"><li><span>Deal 1042 · Proposal</span><span class="badge b-red">14 days</span></li><li><span>Deal 0987 · Discovery</span><span class="badge b-amber">9 days</span></li></ul></div>
-                </div>
-              </section>
+              <section class="cad-pane" role="tabpanel" id="q6" aria-labelledby="k6" tabindex="0" hidden><div class="ph"><h4>HubSpot Team Activity</h4><p>Follow-ups, tasks and neglected deals, from HubSpot</p></div><div class="seg" role="group" aria-label="Period"><button type="button" data-v="today" aria-pressed="false">Today</button><button type="button" data-v="week" aria-pressed="true">This week</button><button type="button" data-v="month" aria-pressed="false">This month</button></div><div class="tiles t4" id="hsTiles"></div><div class="cgrid"><div class="ccard"><p class="cc-t">Follow-ups by person</p><div id="hsBars"></div><p class="legend"><i class="c1"></i>Calls <i class="c2"></i>Emails <i class="c3"></i>Meetings</p></div><div class="ccard"><p class="cc-t">Neglected deals</p><ul class="mini"><li><span>Deal 1042 · Proposal</span><span class="badge b-red">14 days</span></li><li><span>Deal 0987 · Discovery</span><span class="badge b-amber">9 days</span></li></ul></div></div></section>
 
-              <section class="cad-pane" role="tabpanel" id="q7" aria-labelledby="k7" tabindex="0" hidden>
-                <div class="ph"><h4>Cold Calling Activity</h4><p>Calls, outcomes and follow-ups from the sales team’s call log</p></div>
-                <div class="tiles t4"><div><span>Calls made</span><strong>412</strong></div><div><span>Connected calls</span><strong>131</strong><small>32% of calls</small></div><div><span>Positive</span><strong>27</strong><small>9 meetings booked</small></div><div><span>Follow-ups due</span><strong>18</strong></div></div>
-                <div class="ccard"><p class="cc-t">Calls by outcome</p>
-                  <div class="stack" aria-hidden="true"><i class="o1" style="--w:7%"></i><i class="o2" style="--w:12%"></i><i class="o3" style="--w:13%"></i><i class="o4" style="--w:60%"></i><i class="o5" style="--w:8%"></i></div>
-                  <p class="legend"><i class="o1"></i>Positive <i class="o2"></i>Follow-up <i class="o3"></i>Negative <i class="o4"></i>Not connected <i class="o5"></i>Bad numbers</p></div>
-              </section>
+              <section class="cad-pane" role="tabpanel" id="q7" aria-labelledby="k7" tabindex="0" hidden><div class="ph"><h4>Cold Calling Activity</h4><p>Calls, outcomes and follow-ups from the sales team’s call log</p></div><div class="tiles t4"><div><span>Calls made</span><strong>412</strong></div><div><span>Connected calls</span><strong>131</strong><small>32% of calls</small></div><div><span>Positive</span><strong>27</strong><small>9 meetings booked</small></div><div><span>Follow-ups due</span><strong>18</strong></div></div><div class="ccard"><p class="cc-t">Calls by outcome <small class="cc-s">tap an outcome</small></p><div class="stack" id="ocStack" aria-hidden="true"><i class="o1" data-o="o1" style="--w:7%"></i><i class="o2" data-o="o2" style="--w:12%"></i><i class="o3" data-o="o3" style="--w:13%"></i><i class="o4" data-o="o4" style="--w:60%"></i><i class="o5" data-o="o5" style="--w:8%"></i></div><div class="lgd"><button type="button" class="lgb" data-o="o1" data-n="29" data-l="Positive"><i class="o1"></i>Positive</button><button type="button" class="lgb" data-o="o2" data-n="49" data-l="Follow-up"><i class="o2"></i>Follow-up</button><button type="button" class="lgb" data-o="o3" data-n="54" data-l="Negative"><i class="o3"></i>Negative</button><button type="button" class="lgb" data-o="o4" data-n="247" data-l="Not connected"><i class="o4"></i>Not connected</button><button type="button" class="lgb" data-o="o5" data-n="33" data-l="Bad numbers"><i class="o5"></i>Bad numbers</button></div><p class="oc-read" id="ocRead" aria-live="polite">412 calls this week</p></div></section>
 
-              <section class="cad-pane" role="tabpanel" id="q8" aria-labelledby="k8" tabindex="0" hidden>
-                <div class="ph"><h4>Admin Settings</h4><p>Who can see the Campaigns tab</p></div>
-                <div class="ccard">
-                  <label class="ck"><input type="checkbox" checked disabled> Admin <small>always on</small></label>
-                  <label class="ck"><input type="checkbox" checked> Manager</label>
-                  <label class="ck"><input type="checkbox" checked> Viewer</label>
-                  <label class="ck"><input type="checkbox"> Member</label>
-                  <p class="cnote" id="auditNote">Every grant or revoke is written to the audit log.</p>
-                </div>
-                <div class="ctbl"><table><thead><tr><th>Role</th><th>Can do</th></tr></thead><tbody>
-                  <tr><td>Admin</td><td>Everything, including settings and roles</td></tr>
-                  <tr><td>Manager</td><td>Own channels; accepts or returns members’ work</td></tr>
-                  <tr><td>Member</td><td>Own tasks and goals; submits work with proof</td></tr>
-                  <tr><td>Viewer</td><td>Read-only dashboards</td></tr></tbody></table></div>
-                <p class="cnote">Rules are enforced by row-level security in the database, not just hidden in the interface.</p>
-              </section>
+              <section class="cad-pane" role="tabpanel" id="q8" aria-labelledby="k8" tabindex="0" hidden><div class="ph"><h4>Admin Settings</h4><p>Who can see the Campaigns tab</p></div><div class="ccard"><div class="sw-row"><span>Admin <small>always on</small></span><button type="button" class="switch" role="switch" aria-checked="true" aria-label="Admin can see Campaigns" data-r="Admin" disabled></button></div><div class="sw-row"><span>Manager</span><button type="button" class="switch" role="switch" aria-checked="true" aria-label="Manager can see Campaigns" data-r="Manager"></button></div><div class="sw-row"><span>Viewer</span><button type="button" class="switch" role="switch" aria-checked="true" aria-label="Viewer can see Campaigns" data-r="Viewer"></button></div><div class="sw-row"><span>Member</span><button type="button" class="switch" role="switch" aria-checked="false" aria-label="Member can see Campaigns" data-r="Member"></button></div><p class="cc-t" style="margin-top:12px">Audit log</p><ul class="audit" id="auditLog"><li><b>Admin</b> granted Viewer access · 2 days ago</li></ul></div><div class="ctbl wrap"><table><thead><tr><th>Role</th><th>Can do</th></tr></thead><tbody><tr><td>Admin</td><td>Everything, including settings and roles</td></tr><tr><td>Manager</td><td>Own channels; accepts or returns members’ work</td></tr><tr><td>Member</td><td>Own tasks and goals; submits work with proof</td></tr><tr><td>Viewer</td><td>Read-only dashboards</td></tr></tbody></table></div><p class="cnote">Rules are enforced by row-level security in the database, not just hidden in the interface.</p></section>
             </div>
           </div>
         </div></div></article>
@@ -728,16 +701,62 @@ section.blk{padding:5.5rem 0}
 })();
 (function(){  /* Cadence replica */
   var ktabs=[].slice.call(document.querySelectorAll(".cad-side [role=tab]"));
-  function ksel(i,focus){ktabs.forEach(function(t,j){var on=j===i;t.setAttribute("aria-selected",on);t.tabIndex=on?0:-1;document.getElementById(t.getAttribute("aria-controls")).hidden=!on;});if(focus)ktabs[i].focus();}
+  function ksel(i,focus){ktabs.forEach(function(t,j){var on=j===i;t.setAttribute("aria-selected",on);t.tabIndex=on?0:-1;document.getElementById(t.getAttribute("aria-controls")).hidden=!on;});if(focus)ktabs[i].focus();if(ktabs[i].scrollIntoView&&innerWidth<760)ktabs[i].scrollIntoView({block:"nearest",inline:"center",behavior:"smooth"});}
   ktabs.forEach(function(t,i){t.addEventListener("click",function(){ksel(i)});t.addEventListener("keydown",function(e){var n=ktabs.length,k=e.key;
     if(k==="ArrowDown"||k==="ArrowRight"){e.preventDefault();ksel((i+1)%n,true)}else if(k==="ArrowUp"||k==="ArrowLeft"){e.preventDefault();ksel((i-1+n)%n,true)}});});
+  function segs(root,cb){var bs=[].slice.call(root.querySelectorAll(".seg button"));bs.forEach(function(b){b.addEventListener("click",function(){bs.forEach(function(x){x.setAttribute("aria-pressed",x===b)});cb(b.dataset.v);});});}
+  function tiles(el,arr){el.innerHTML=arr.map(function(t){return '<div><span>'+t[0]+'</span><strong'+(t[2]?' class="red"':'')+'>'+t[1]+'</strong>'+(t[3]?'<small'+(t[4]?' class="red"':'')+'>'+t[3]+'</small>':'')+'</div>'}).join("");}
+  function badge(p){return p>=100?"b-green":p>=80?"b-amber":"b-red";}
+  /* My Day */
+  var md=document.getElementById("mdList"),mdSub=document.getElementById("mdSub"),pill=document.querySelector("#k1 .pill");
+  function mdCount(){var it=md.querySelectorAll("li"),d=md.querySelectorAll('li[aria-checked="true"]').length;mdSub.textContent="Thursday · standup done · "+d+" of "+it.length+" done";pill.textContent=it.length-d;}
+  [].forEach.call(md.querySelectorAll("li"),function(li){function tg(){var on=li.getAttribute("aria-checked")!=="true";li.setAttribute("aria-checked",on);var b=li.querySelector(".badge");b.className="badge "+(on?"b-green":li.dataset.badge);b.textContent=on?"Done":li.dataset.label;mdCount();}
+    li.addEventListener("click",tg);li.addEventListener("keydown",function(e){if(e.key===" "||e.key==="Enter"){e.preventDefault();tg();}});});
+  mdCount();
+  /* Command dashboard */
+  var CD={week:{t:[["On-time %","87%"],["Overdue","4",1],["Open blockers","2"],["Carried 3×+","1",1]],b:[72,58,81,64],l:[["Member C","3 overdue","b-red"],["Member F","1 carried 3×","b-amber"]]},
+          month:{t:[["On-time %","91%"],["Overdue","9",1],["Open blockers","3"],["Carried 3×+","2",1]],b:[88,76,93,79],l:[["Member C","5 overdue","b-red"],["Member B","2 carried 3×","b-amber"]]}};
+  var q2=document.getElementById("q2");segs(q2,function(v){var d=CD[v];tiles(document.getElementById("cdTiles"),d.t);
+    [].forEach.call(document.querySelectorAll("#cdBars .hbar"),function(h,i){h.querySelector("b").style.setProperty("--w",d.b[i]+"%");h.querySelector("em").textContent=d.b[i]+"%";});
+    document.getElementById("cdLag").innerHTML=d.l.map(function(x){return '<li><span>'+x[0]+'</span><span class="badge '+x[2]+'">'+x[1]+'</span></li>'}).join("");});
+  /* Acceptance */
   var rv=document.getElementById("rvState");
   [].forEach.call(document.querySelectorAll("[data-rv]"),function(b){b.addEventListener("click",function(){
     if(b.dataset.rv==="ok"){rv.textContent="Accepted · marked Done";rv.className="rv-state ok";}
     else{rv.textContent="Changes requested · resubmit by Friday";rv.className="rv-state chg";}});});
-  var an=document.getElementById("auditNote");
-  [].forEach.call(document.querySelectorAll(".ck input:not([disabled])"),function(c){c.addEventListener("change",function(){
-    an.textContent=(c.checked?"Granted ":"Revoked ")+c.parentNode.textContent.trim()+" · written to the audit log.";});});
+  /* Efforts vs Outcome */
+  var EO={email:["Email Marketing",[["Emails sent","Effort","8,000","500","8,200",96],["Meetings booked","Outcome","12","0","13",108],["Bounce rate","Outcome · lower is better","2.0%","–","2.6%",77]]],
+          seo:["SEO",[["Blogs published","Effort","8","1","9",100],["Organic sessions","Outcome","12,000","0","10,900",91],["Avg. position","Outcome · lower is better","8.0","–","9.1",88]]],
+          social:["Social Media",[["Posts published","Effort","20","2","21",95],["Engagement rate","Outcome","4.0%","–","4.6%",115],["Followers gained","Outcome","300","0","210",70]]]};
+  function eo(v){var d=EO[v];document.getElementById("eoSub").textContent=d[0]+" · monthly";document.getElementById("eoBody").innerHTML=d[1].map(function(r){return '<tr><td>'+r[0]+'<small>'+r[1]+'</small></td><td>'+r[2]+'</td><td>'+r[3]+'</td><td>'+r[4]+'</td><td><span class="badge '+badge(r[5])+'">'+r[5]+'%</span></td></tr>'}).join("");}
+  segs(document.getElementById("q4"),eo);eo("email");
+  /* Campaigns */
+  var CP={all:[["Emails sent","12,480"],["Open rate","64.2%"],["Click rate","5.8%"],["Replies","142"],[1780,2240,1570,2560,2400,860,690]],
+          amer:[["Emails sent","4,380"],["Open rate","65.0%"],["Click rate","6.0%"],["Replies","51"],[610,760,640,920,860,320,270]],
+          apac:[["Emails sent","4,960"],["Open rate","63.1%"],["Click rate","5.7%"],["Replies","57"],[720,900,560,1010,940,410,380]],
+          emea:[["Emails sent","3,140"],["Open rate","64.0%"],["Click rate","5.6%"],["Replies","34"],[450,580,370,630,600,130,40]]};
+  var cpB=document.getElementById("cpBars");cpB.innerHTML=new Array(8).join("<b></b>");
+  function cp(v){var d=CP[v];tiles(document.getElementById("cpTiles"),d.slice(0,4));var mx=Math.max.apply(null,d[4]);
+    [].forEach.call(cpB.querySelectorAll("b"),function(b,i){b.style.setProperty("--h",Math.max(6,Math.round(d[4][i]/mx*100))+"%");b.setAttribute("data-v",d[4][i].toLocaleString("en-IN")+" sent");});
+    [].forEach.call(document.querySelectorAll("#cpRows tr"),function(r){r.classList.toggle("hl",v!=="all"&&r.dataset.r===v);});}
+  [].forEach.call(cpB.querySelectorAll("b"),function(b){b.addEventListener("click",function(){var s=b.classList.contains("sel");[].forEach.call(cpB.querySelectorAll("b"),function(x){x.classList.remove("sel")});if(!s)b.classList.add("sel");});});
+  segs(document.getElementById("q5"),cp);cp("all");
+  /* HubSpot team activity */
+  var HS={today:[[["Calls","18"],["Emails","41"],["Meetings","3"],["Pending tasks","38",0,"6 overdue",1]],[[44,30,6],[26,46,4],[35,20,12]]],
+          week:[[["Calls","186"],["Emails","342"],["Meetings","21"],["Pending tasks","38",0,"6 overdue",1]],[[40,35,8],[28,42,5],[33,22,10]]],
+          month:[[["Calls","742"],["Emails","1,368"],["Meetings","86"],["Pending tasks","38",0,"6 overdue",1]],[[37,38,9],[31,40,7],[30,27,11]]]};
+  var hb=document.getElementById("hsBars");hb.innerHTML=["Rep A","Rep B","Rep C"].map(function(n){return '<div class="sbar"><span>'+n+'</span><b><i class="c1"></i><i class="c2"></i><i class="c3"></i></b></div>'}).join("");
+  function hs(v){var d=HS[v];tiles(document.getElementById("hsTiles"),d[0]);[].forEach.call(hb.querySelectorAll(".sbar"),function(s,i){[].forEach.call(s.querySelectorAll("i"),function(x,j){x.style.setProperty("--w",d[1][i][j]+"%");});});}
+  segs(document.getElementById("q6"),hs);hs("week");
+  /* Cold calling outcomes */
+  var st=document.getElementById("ocStack"),rd=document.getElementById("ocRead"),lgs=[].slice.call(document.querySelectorAll(".lgb"));
+  lgs.forEach(function(b){b.setAttribute("aria-pressed","false");b.addEventListener("click",function(){var on=b.getAttribute("aria-pressed")!=="true";lgs.forEach(function(x){x.setAttribute("aria-pressed","false")});
+    [].forEach.call(st.querySelectorAll("i"),function(i){i.classList.toggle("on",on&&i.dataset.o===b.dataset.o)});st.classList.toggle("focus",on);
+    if(on){b.setAttribute("aria-pressed","true");rd.textContent=b.dataset.l+": "+b.dataset.n+" calls ("+Math.round(b.dataset.n/412*100)+"%)";}else rd.textContent="412 calls this week";});});
+  /* Admin switches */
+  var al=document.getElementById("auditLog");
+  [].forEach.call(document.querySelectorAll(".cad .switch:not([disabled])"),function(s){s.addEventListener("click",function(){var on=s.getAttribute("aria-checked")!=="true";s.setAttribute("aria-checked",on);
+    var li=document.createElement("li");li.className="new";li.innerHTML="<b>You</b> "+(on?"granted ":"revoked ")+s.dataset.r+" access · just now";al.insertBefore(li,al.firstChild);while(al.children.length>4)al.removeChild(al.lastChild);});});
 
 })();
 (function(){
